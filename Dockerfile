@@ -4,7 +4,7 @@ FROM rust:1.83-slim-bookworm AS builder
 WORKDIR /app
 
 # Copy full metadata (quan trọng để cache đúng)
-COPY Cargo.toml Cargo.lock ./
+COPY Cargo.toml ./
 
 # Nếu bạn KHÔNG cần build.rs → bỏ dòng này
 # Nếu vẫn cần thì giữ
